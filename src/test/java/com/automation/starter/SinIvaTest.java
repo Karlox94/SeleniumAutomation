@@ -45,9 +45,8 @@ public class SinIvaTest {
 		this.driver.get("https://es.calcuworld.com/calculadoras-financieras/calculadora-iva/");
 		driver.manage().window().maximize();
 
-		// this.buttonConIva = this.driver.findElement(By.xpath("//*[@id=\"post-7\"]/div/div[3]/div[2]/ul/li[1]/a"));
-		// this.buttonSinIva = this.driver.findElement(By.xpath("//ul[@class='nav nav-tabs']/li[2]"));
-		this.buttonSinIva = (new WebDriverWait(this.driver, 5)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//ul[@class='nav nav-tabs']/li[2]")));
+		
+		this.buttonSinIva = this.driver.findElement(By.xpath("//ul[@class='nav nav-tabs']/li[2]"));
 		this.camponum = this.driver.findElement(By.xpath("//*[@id=\"profile\"]/form/div/div/input"));
 		this.selectTipo = this.driver.findElement(By.xpath("//*[@id=\"profile\"]/form/select"));
 		this.dropdown = new Select(this.selectTipo);
