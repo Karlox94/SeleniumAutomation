@@ -36,7 +36,7 @@ public class SinIvaTest {
 		// DesiredCapabilities capabilities = new DesiredCapabilities();
 		// capabilities.setCapability(ChromeOptions.CAPABILITY, this.chrome_options);
 
-		System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
 		// this.driver = new ChromeDriver(capabilities);
 		this.driver = new ChromeDriver();
 
@@ -53,7 +53,7 @@ public class SinIvaTest {
 
 	@Test
 	public void testSinIva() throws InterruptedException {
-		String cantidadSinIvaEsperada = "61,98 â‚¬";
+		String cantidadSinIvaEsperada = "61,98 €";
 		
 		this.buttonSinIva.click();
 		this.camponum.sendKeys("75");
